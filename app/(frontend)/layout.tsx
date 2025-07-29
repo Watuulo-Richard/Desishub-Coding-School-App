@@ -1,3 +1,4 @@
+import FloatingNavigation from "@/components/FloatingNavigation";
 import "./app.css";
 import type { Metadata } from "next";
 
@@ -13,6 +14,7 @@ export default function FrontendLayout({
 }>) {
   return (
       <body>
+        <FloatingNavigation/>
         {children}
       </body>
   );
