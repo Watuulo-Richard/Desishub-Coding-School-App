@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./app.css";
+import FloatingNavigation from "@/components/FloatingNavigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
