@@ -496,5 +496,5 @@ export {
   initSmoothScrolling,
   scrollToSection,
   addLoadingAnimation,
-  initNavigation
+  initNavigation    
 };

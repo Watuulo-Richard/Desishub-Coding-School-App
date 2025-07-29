@@ -2,10 +2,9 @@ import React from 'react'
 
 export default function WorkSection() {
   return (
-    // Work Section
     <section id="work" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
             Selected Work
           </h2>
@@ -16,7 +15,7 @@ export default function WorkSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Project 1 */}
-          <div className="group fade-in">
+          <div className="group">
             <div
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 aspect-video mb-6 group-hover:scale-105 transition-transform duration-500"
             >
@@ -55,7 +54,7 @@ export default function WorkSection() {
           </div>
 
           {/* <!-- Project 2 */}
-          <div className="group fade-in">
+          <div className="group">
             <div
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 aspect-video mb-6 group-hover:scale-105 transition-transform duration-500"
             >
@@ -94,7 +93,7 @@ export default function WorkSection() {
           </div>
 
           {/* <!-- Project 3 */}
-          <div className="group fade-in">
+          <div className="group">
             <div
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 aspect-video mb-6 group-hover:scale-105 transition-transform duration-500"
             >
@@ -133,7 +132,7 @@ export default function WorkSection() {
           </div>
 
           {/* <!-- Project 4 */}
-          <div className="group fade-in">
+          <div className="group">
             <div
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 aspect-video mb-6 group-hover:scale-105 transition-transform duration-500"
             >
