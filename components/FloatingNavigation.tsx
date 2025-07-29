@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -8,12 +9,8 @@ export default function FloatingNavigation() {
       className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 nav-pill rounded-full px-6 py-3"
     >
       <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <div
-            className="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3"
-          >
-            <span className="text-black font-bold text-sm">D</span>
-          </div>
+        <div className="flex items-center gap-3">
+              <Image className='w-10 h-10' src={"/desishublogo.png"} alt="Logo" width={200} height={200} />
           <span className="text-white font-medium">DesishHub</span>
         </div>
         <div

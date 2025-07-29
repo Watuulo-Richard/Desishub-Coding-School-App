@@ -1,11 +1,19 @@
 import React from 'react'
 
 export default function ServicesSection() {
+  function addLoadingAnimation() {
+    const cards = document.querySelectorAll(".glass-effect");
+  
+    cards.forEach((card, index) => {
+      (card as HTMLElement).style.animationDelay = `${index * 0.1}s`;
+      card.classList.add("animate-fade-in");
+    });
+  }
   return (
     //Services Section
     <section id="services" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
             What We Create
           </h2>
@@ -16,7 +24,7 @@ export default function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Web Development */}
-          <div className="service-card glass-effect rounded-2xl p-8 fade-in">
+          <div className="service-card glass-effect rounded-2xl p-8 ">
             <div
               className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mb-6"
             >
@@ -44,7 +52,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Mobile Applications */}
-          <div className="service-card glass-effect rounded-2xl p-8 fade-in">
+          <div className="service-card glass-effect rounded-2xl p-8 ">
             <div
               className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mb-6"
             >
@@ -72,7 +80,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Enterprise Systems */}
-          <div className="service-card glass-effect rounded-2xl p-8 fade-in">
+          <div className="service-card glass-effect rounded-2xl p-8">
             <div
               className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mb-6"
             >
@@ -100,7 +108,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Web Design */}
-          <div className="service-card glass-effect rounded-2xl p-8 fade-in">
+          <div className="service-card glass-effect rounded-2xl p-8">
             <div
               className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mb-6"
             >
@@ -128,7 +136,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Developer Training */}
-          <div className="service-card glass-effect rounded-2xl p-8 fade-in">
+          <div className="service-card glass-effect rounded-2xl p-8">
             <div
               className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mb-6"
             >
@@ -156,7 +164,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Consulting */}
-          <div className="service-card glass-effect rounded-2xl p-8 fade-in">
+          <div className="service-card glass-effect rounded-2xl p-8">
             <div
               className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mb-6"
             >
