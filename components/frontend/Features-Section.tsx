@@ -5,7 +5,7 @@ export default function FeaturesSection() {
     <>
     <section id="features" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16">
           <h2
             className="text-4xl md:text-5xl font-light tracking-tight mb-4 gradient-text bg-gradient-to-r from-white via-blue-300 to-indigo-400 text-green-600"
           >
@@ -19,7 +19,7 @@ export default function FeaturesSection() {
         {/* <!-- Feature Row 1 --> */}
         <div className="flex flex-col md:flex-row gap-6 mb-6">
           {/* <!-- 1/3 Column --> */}
-          <div className="w-full md:w-1/3 enhanced-glass rounded-2xl p-8 fade-in">
+          <div className="w-full md:w-1/3 enhanced-glass rounded-2xl p-8">
             <div className="icon-circle mb-4">
               <i className="fas fa-brain text-blue-400"></i>
             </div>
@@ -34,7 +34,7 @@ export default function FeaturesSection() {
 
           {/* <!-- 2/3 Column --> */}
           <div
-            className="w-full md:w-2/3 enhanced-glass rounded-2xl p-8 flex flex-col md:flex-row items-center fade-in"
+            className="w-full md:w-2/3 enhanced-glass rounded-2xl p-8 flex flex-col md:flex-row items-center"
           >
             <div className="flex-1 mb-6 md:mb-0 md:mr-6">
               <h3 className="text-2xl text-white mb-3 font-display">
@@ -70,7 +70,7 @@ export default function FeaturesSection() {
         {/* <!-- Feature Row 2 --> */}
         <div className="flex flex-col md:flex-row-reverse gap-6 mb-6">
           {/* <!-- 1/3 Column --> */}
-          <div className="w-full md:w-1/3 enhanced-glass rounded-2xl p-8 fade-in">
+          <div className="w-full md:w-1/3 enhanced-glass rounded-2xl p-8">
             <div className="icon-circle mb-4">
               <i className="fas fa-shield-alt text-indigo-400"></i>
             </div>
@@ -85,7 +85,7 @@ export default function FeaturesSection() {
 
           {/* <!-- 2/3 Column --> */}
           <div
-            className="w-full md:w-2/3 enhanced-glass rounded-2xl p-8 flex flex-col md:flex-row items-center fade-in"
+            className="w-full md:w-2/3 enhanced-glass rounded-2xl p-8 flex flex-col md:flex-row items-center"
           >
             <div className="flex-1 mb-6 md:mb-0 md:mr-6">
               <h3 className="text-2xl text-white mb-3 font-display">
@@ -117,7 +117,7 @@ export default function FeaturesSection() {
         {/* <!-- Feature Row 3 --> */}
         <div className="flex flex-col md:flex-row gap-6">
           {/* <!-- 1/3 Column --> */}
-          <div className="w-full md:w-1/3 enhanced-glass rounded-2xl p-8 fade-in">
+          <div className="w-full md:w-1/3 enhanced-glass rounded-2xl p-8">
             <div className="icon-circle mb-4">
               <i className="fas fa-bolt text-blue-400"></i>
             </div>
@@ -131,7 +131,7 @@ export default function FeaturesSection() {
           </div>
 
           {/* <!-- 2/3 Column --> */}
-          <div className="w-full md:w-2/3 enhanced-glass rounded-2xl p-8 fade-in">
+          <div className="w-full md:w-2/3 enhanced-glass rounded-2xl p-8">
             <h3 className="text-2xl text-white mb-3 font-display">
               Technology Stack
             </h3>
