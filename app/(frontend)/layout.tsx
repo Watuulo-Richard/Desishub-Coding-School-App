@@ -1,4 +1,4 @@
-import FloatingNavigation from "@/components/FloatingNavigation";
+import FloatingNavigation from "@/components/frontend/FloatingNavigation";
 import "./app.css";
 import type { Metadata } from "next";
 
