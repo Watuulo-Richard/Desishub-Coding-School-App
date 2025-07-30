@@ -5,10 +5,13 @@ import InteractiveServices from '@/components/frontend/InteractiveServices';
 import PricingSection from '@/components/frontend/Pricing-section';
 import ServicesSection from '@/components/frontend/ServicesSection';
 import WorkSection from '@/components/frontend/WorkSection';
-import ProcessSection from '@/components/frontend/Process-Section';
 import TechnologyStackSection from '@/components/frontend/Technology-Stack-Section';
 import WhyChooseUsSection from '@/components/frontend/Why-Choose-Us-Section';
 import React from 'react';
+import ProcessSection from '@/components/frontend/ProcessSection';
+import CodingSectionSection from '@/components/frontend/Coding-Section-Section';
+import BlogSection from '@/components/frontend/Blog-Section';
+import FAQSection from '@/components/frontend/FAQ-Section';
 
 export default function page() {
   return (
@@ -26,6 +29,9 @@ export default function page() {
         <ProcessSection />
         <FeaturedWorkSection />
         <TechnologyStackSection />
+        <CodingSectionSection />
+        <BlogSection />
+        <FAQSection />
       </div>
     </>
   );

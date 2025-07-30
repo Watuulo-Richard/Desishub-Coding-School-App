@@ -5,7 +5,7 @@ export default function ProcessSection() {
     // Process Section
     <section id="process" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
             Our Process
           </h2>
@@ -16,7 +16,7 @@ export default function ProcessSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Step 1 */}
-          <div className="text-center fade-in">
+          <div className="text-center">
             <div
               className="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white border-opacity-20"
             >
@@ -30,7 +30,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Step 2 */}
-          <div className="text-center fade-in">
+          <div className="text-center">
             <div
               className="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white border-opacity-20"
             >
@@ -44,7 +44,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Step 3 */}
-          <div className="text-center fade-in">
+          <div className="text-center">
             <div
               className="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white border-opacity-20"
             >
@@ -58,7 +58,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Step 4 */}
-          <div className="text-center fade-in">
+          <div className="text-center">
             <div
               className="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white border-opacity-20"
             >
