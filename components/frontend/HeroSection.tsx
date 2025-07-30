@@ -20,21 +20,14 @@ export default function HeroSection() {
         }}
       />
 
+      {/* Animation Card (Geometric Shape) */}
+      <div className="geometric-shape hidden lg:block absolute z-0" />
+
       {/* Hero Content */}
       <div className="max-w-4xl mx-auto text-center z-10">
-        <span
-          className="inline-block px-4 py-2 text-sm font-medium text-white bg-white bg-opacity-10 backdrop-blur-sm rounded-full mb-8 border border-white border-opacity-20 mt-8"
-        >
-          Design Studio
-        </span>
-
-        <h1
-          className="hero-title text-white text-5xl md:text-7xl font-bold tracking-tight mt-12 leading-tight mb-6"
-        >
+        <h1 className="hero-title text-white text-5xl md:text-7xl font-bold tracking-tight mt-12 leading-tight mb-6">
           Crafting digital experiences<br />
-          <span
-            className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
-          >
+          <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             through purposeful design
           </span>
         </h1>

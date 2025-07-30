@@ -1,4 +1,13 @@
 "use client";
+import {
+	Github,
+	Instagram,
+	Linkedin,
+	Mail,
+	MapPin,
+	Phone,
+	Twitter,
+} from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -566,7 +575,7 @@ export default function MultiStepForm() {
 							<div className="glass-effect rounded-2xl p-6">
 								<div className="flex items-center mb-4">
 									<div className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
-										<i className="fas fa-map-marker-alt text-white"></i>
+										<MapPin className="text-white w-5 h-5" />
 									</div>
 									<div>
 										<h4 className="font-medium">Location</h4>
@@ -581,7 +590,7 @@ export default function MultiStepForm() {
 							<div className="glass-effect rounded-2xl p-6">
 								<div className="flex items-center mb-4">
 									<div className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
-										<i className="fas fa-envelope text-white"></i>
+										<Mail className="text-white w-5 h-5" />
 									</div>
 									<div>
 										<h4 className="font-medium">Email</h4>
@@ -594,7 +603,7 @@ export default function MultiStepForm() {
 							<div className="glass-effect rounded-2xl p-6">
 								<div className="flex items-center mb-4">
 									<div className="w-12 h-12 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
-										<i className="fas fa-phone text-white"></i>
+										<Phone className="text-white w-5 h-5" />
 									</div>
 									<div>
 										<h4 className="font-medium">Phone</h4>
@@ -613,25 +622,25 @@ export default function MultiStepForm() {
 										href="#"
 										className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 									>
-										<i className="fab fa-twitter text-white"></i>
+										<Twitter className="text-white w-5 h-5" />
 									</Link>
 									<Link
 										href="#"
 										className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 									>
-										<i className="fab fa-linkedin text-white"></i>
+										<Linkedin className="text-white w-5 h-5" />
 									</Link>
 									<Link
 										href="#"
 										className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 									>
-										<i className="fab fa-github text-white"></i>
+										<Github className="text-white w-5 h-5" />
 									</Link>
 									<Link
 										href="#"
 										className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 									>
-										<i className="fab fa-instagram text-white"></i>
+										<Instagram className="text-white w-5 h-5" />
 									</Link>
 								</div>
 							</div>
