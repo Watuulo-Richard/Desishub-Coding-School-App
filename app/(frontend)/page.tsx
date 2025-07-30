@@ -9,6 +9,9 @@ import ProcessSection from '@/components/frontend/Process-Section';
 import TechnologyStackSection from '@/components/frontend/Technology-Stack-Section';
 import WhyChooseUsSection from '@/components/frontend/Why-Choose-Us-Section';
 import React from 'react';
+import TestimonialsSection from '@/components/frontend/TestimonialsSection';
+import AboutSection from '@/components/frontend/AboutSection';
+import TeamSection from '@/components/frontend/TeamSection';
 
 export default function page() {
   return (
@@ -26,6 +29,9 @@ export default function page() {
         <ProcessSection />
         <FeaturedWorkSection />
         <TechnologyStackSection />
+        <TestimonialsSection/>
+        <AboutSection />
+        <TeamSection/>
       </div>
     </>
   );
