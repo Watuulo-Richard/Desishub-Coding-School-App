@@ -66,7 +66,7 @@ export default function WorkSection() {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} flex items-center justify-center`}
                 >
-                  <p className={`${project.icon} text-6xl text-white`}></p>
+                  <project.icon className="text-8xl text-white"/>
                 </div>
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white font-medium">View Project</span>

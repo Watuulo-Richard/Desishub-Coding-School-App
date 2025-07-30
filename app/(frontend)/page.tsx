@@ -23,7 +23,7 @@ export default function page() {
     <>
       <div className="bg-dark text-white min-h-screen relative">
         {/* <!-- 3D Background --> */}
-        <div className="bg-3d"></div>
+        {/* <div className="bg-3d"></div> */}
         <HeroSection />
         <ServicesSection />
         <InteractiveServices />
