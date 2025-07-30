@@ -66,7 +66,7 @@ export default function FeaturesSection() {
 								</ul>
 							</div>
 							<div className="w-full md:w-64 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
-								<Network className="text-5xl text-white/40" />
+								<Network className="w-16 h-16 text-white/40" />
 							</div>
 						</div>
 					</div>
@@ -111,7 +111,7 @@ export default function FeaturesSection() {
 								</div>
 							</div>
 							<div className="w-full md:w-64 h-48 bg-gradient-to-br from-indigo-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
-								<Sliders className="text-5xl text-white/40" />
+								<Sliders className="w-16 h-16 text-white/40" />
 							</div>
 						</div>
 					</div>
