@@ -45,8 +45,23 @@ export default function InteractiveServices() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="enhanced-glass rounded-3xl p-8 md:p-16">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+        <div className="enhanced-glass rounded-3xl p-8 md:p-16 relative">
+          {/* Diagonal Fade Grid Background - Top Left */}
+          <div
+            className="absolute inset-0 z-0 rounded-3xl opacity-5"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, #d1d5db 1px, transparent 1px),
+                linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+              `,
+              backgroundSize: "32px 32px",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)",
+              maskImage:
+                "radial-gradient(ellipse 80% 80% at 0% 0%, #000 50%, transparent 90%)",
+            }}
+          />
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 relative z-10">
             <div className="flex-1 max-w-lg">
               <div className="flex items-center gap-2 text-gray-400 mb-6">
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>

@@ -2,13 +2,28 @@ import React from 'react'
 
 export default function HeroSection() {
   return (
-    //Hero Section
-    <section
-      className="relative h-screen flex items-center justify-center px-6 overflow-hidden mt-3"
-    >
+    // Hero Section with Top Grid Background
+    <section className="relative h-screen flex items-center justify-center px-6 overflow-hidden">
+      {/* Top Fade Grid Background */}
+      <div
+        className="absolute inset-0 z-0 opacity-5"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+            linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)
+          `,
+          backgroundSize: "30px 30px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+          maskImage:
+            "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+        }}
+      />
+
+      {/* Hero Content */}
       <div className="max-w-4xl mx-auto text-center z-10">
         <span
-          className="inline-block px-4 py-2 text-sm font-medium text-white bg-white bg-opacity-10 backdrop-blur-sm rounded-full mb-8 border border-white border-opacity-20"
+          className="inline-block px-4 py-2 text-sm font-medium text-white bg-white bg-opacity-10 backdrop-blur-sm rounded-full mb-8 border border-white border-opacity-20 mt-8"
         >
           Design Studio
         </span>
