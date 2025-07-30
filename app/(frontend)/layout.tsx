@@ -12,11 +12,10 @@ export default function FrontendLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	return <body>{children}</body>;
-  return (
-      <body>
-        <FloatingNavigation/>
-        {children}
-      </body>
-  );
+	return (
+		<body>
+			<FloatingNavigation />
+			{children}
+		</body>
+	);
 }
