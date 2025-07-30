@@ -33,11 +33,9 @@ export default function page() {
         <ProcessSection />
         <FeaturedWorkSection />
         <TechnologyStackSection />
-
         <CodingSectionSection />
         <BlogSection />
         <FAQSection />
-
         <TestimonialsSection />
         <AboutSection />
         <TeamSection />
@@ -45,6 +43,4 @@ export default function page() {
       </div>
     </>
   );
-
-
 }
