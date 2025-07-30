@@ -1,4 +1,5 @@
 'use client'
+import { ChevronDown } from 'lucide-react';
 import React, { useState } from 'react';
 
 const faqData = [
@@ -81,7 +82,7 @@ export default function FAQSection() {
                   transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
                 }}
               >
-                <i data-lucide="chevron-down" className="w-5 h-5 faq-icon"></i>
+                <ChevronDown className="w-5 h-5"/>
               </div>
             </button>
             {openIndex === index && (
