@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { Twitter, Linkedin, Github, Instagram } from "lucide-react";
 
 export default function Footer() {
 	return (
@@ -25,25 +26,25 @@ export default function Footer() {
 									href="#"
 									className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 								>
-									<i className="fab fa-twitter text-white text-sm"></i>
+									<Twitter className="text-white w-4 h-4" />
 								</Link>
 								<Link
 									href="#"
 									className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 								>
-									<i className="fab fa-linkedin text-white text-sm"></i>
+									<Linkedin className="text-white w-4 h-4" />
 								</Link>
 								<Link
 									href="#"
 									className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 								>
-									<i className="fab fa-github text-white text-sm"></i>
+									<Github className="text-white w-4 h-4" />
 								</Link>
 								<Link
 									href="#"
 									className="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors"
 								>
-									<i className="fab fa-instagram text-white text-sm"></i>
+									<Instagram className="text-white w-4 h-4" />
 								</Link>
 							</div>
 						</div>
@@ -144,13 +145,13 @@ export default function Footer() {
 					<div className="border-t border-white border-opacity-10 mt-12 pt-8 text-center">
 						<p className="text-gray-400 text-sm">
 							© 2024 DesishHub. All rights reserved. |
-							<a href="#" className="hover:text-white transition-colors">
+							<Link href="#" className="hover:text-white transition-colors">
 								Privacy Policy
-							</a>
+							</Link>
 							|
-							<a href="#" className="hover:text-white transition-colors">
+							<Link href="#" className="hover:text-white transition-colors">
 								Terms of Service
-							</a>
+							</Link>
 						</p>
 					</div>
 				</div>
