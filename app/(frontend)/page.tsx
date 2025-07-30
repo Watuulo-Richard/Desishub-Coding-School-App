@@ -1,3 +1,5 @@
+
+
 import FeaturedWorkSection from '@/components/frontend/Featured-Work-Section';
 import FeaturesSection from '@/components/frontend/Features-Section';
 import HeroSection from '@/components/frontend/HeroSection';
@@ -29,4 +31,5 @@ export default function page() {
       </div>
     </>
   );
+
 }
