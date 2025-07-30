@@ -9,6 +9,7 @@ import TechnologyStackSection from "@/components/frontend/Technology-Stack-Secti
 import WhyChooseUsSection from "@/components/frontend/Why-Choose-Us-Section";
 import React from "react";
 import ServicesSection from "@/components/frontend/ServicesSection";
+import MultiStepForm from "@/components/frontend/Multi-step-form";
 
 export default function page() {
 	return (
@@ -26,6 +27,7 @@ export default function page() {
 				<FeaturedWorkSection />
 				<ProcessSection />
 				<TechnologyStackSection />
+				<MultiStepForm />
 			</div>
 		</>
 	);
