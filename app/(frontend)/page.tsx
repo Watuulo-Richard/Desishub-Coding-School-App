@@ -1,5 +1,3 @@
-
-
 import FeaturedWorkSection from '@/components/frontend/Featured-Work-Section';
 import FeaturesSection from '@/components/frontend/Features-Section';
 import HeroSection from '@/components/frontend/HeroSection';
@@ -14,7 +12,7 @@ import React from 'react';
 import TestimonialsSection from '@/components/frontend/TestimonialsSection';
 import AboutSection from '@/components/frontend/AboutSection';
 import TeamSection from '@/components/frontend/TeamSection';
-
+import MultiStepForm from "@/components/frontend/Multi-step-form";
 export default function page() {
   return (
     <>
@@ -34,8 +32,8 @@ export default function page() {
         <TestimonialsSection/>
         <AboutSection />
         <TeamSection/>
+        <MultiStepForm />
       </div>
     </>
   );
-
 }

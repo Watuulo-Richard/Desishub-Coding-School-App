@@ -1,6 +1,7 @@
 import FloatingNavigation from "@/components/frontend/FloatingNavigation";
 import "./app.css";
 import type { Metadata } from "next";
+import Footer from "@/components/frontend/Footer";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -12,11 +13,11 @@ export default function FrontendLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	return <body>{children}</body>;
-  return (
-      <body>
-          <FloatingNavigation/>
-          {children}
-      </body>
-  );
+	return (
+		<body>
+			<FloatingNavigation />
+			{children}
+			<Footer />
+		</body>
+	);
 }
