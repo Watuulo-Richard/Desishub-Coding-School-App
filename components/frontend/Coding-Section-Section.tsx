@@ -1,3 +1,4 @@
+import { Brain, BriefcaseBusiness, Check, CloudCheck, CodeXml, LaptopMinimal, TabletSmartphone } from 'lucide-react';
 import React from 'react';
 
 export default function CodingSectionSection() {
@@ -48,7 +49,7 @@ export default function CodingSectionSection() {
 
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mr-4">
-                <i data-lucide="code" className="w-8 h-8 text-blue-400"></i>
+                <CodeXml className="w-8 h-8 text-blue-400" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-white">
@@ -73,24 +74,15 @@ export default function CodingSectionSection() {
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-blue-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   HTML, CSS, JavaScript
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-blue-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   React & Next.js
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-blue-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Node.js & Express
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
@@ -101,10 +93,7 @@ export default function CodingSectionSection() {
                   MongoDB & PostgreSQL
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-blue-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Git & Deployment
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
@@ -143,10 +132,8 @@ export default function CodingSectionSection() {
 
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl flex items-center justify-center mr-4">
-                <i
-                  data-lucide="smartphone"
-                  className="w-8 h-8 text-green-400"
-                ></i>
+                <TabletSmartphone
+                  className="w-8 h-8 text-green-400"/>
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-white">
@@ -171,45 +158,27 @@ export default function CodingSectionSection() {
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-green-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-green-400 mr-2" />
                   React Native
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-green-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-green-400 mr-2" />
                   Flutter & Dart
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-green-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-green-400 mr-2" />
                   Native Features
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-green-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-green-400 mr-2" />
                   App Store Publishing
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-green-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Push Notifications
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-green-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Real-time Features
                 </div>
               </div>
@@ -241,7 +210,7 @@ export default function CodingSectionSection() {
 
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mr-4">
-                <i data-lucide="brain" className="w-8 h-8 text-purple-400"></i>
+                <Brain className="w-8 h-8 text-purple-400" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-white">
@@ -266,45 +235,27 @@ export default function CodingSectionSection() {
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-purple-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Python & Pandas
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-purple-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Machine Learning
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-purple-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   TensorFlow & PyTorch
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-purple-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Data Visualization
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-purple-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   Deep Learning
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-purple-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-blue-400 mr-2" />
                   AI Model Deployment
                 </div>
               </div>
@@ -336,7 +287,7 @@ export default function CodingSectionSection() {
 
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl flex items-center justify-center mr-4">
-                <i data-lucide="cloud" className="w-8 h-8 text-orange-400"></i>
+                <CloudCheck className="w-8 h-8 text-orange-400" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-white">
@@ -361,45 +312,27 @@ export default function CodingSectionSection() {
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-orange-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-orange-400 mr-2" />
                   AWS & Azure
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-orange-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-orange-400 mr-2" />
                   Docker & Kubernetes
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-orange-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-orange-400 mr-2" />
                   CI/CD Pipelines
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-orange-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-orange-400 mr-2" />
                   Infrastructure as Code
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-orange-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-orange-400 mr-2" />
                   Monitoring & Logging
                 </div>
                 <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    data-lucide="check"
-                    className="w-4 h-4 text-orange-400 mr-2"
-                  ></i>
+                  <Check className="w-4 h-4 text-orange-400 mr-2" />
                   Security Best Practices
                 </div>
               </div>
@@ -431,7 +364,7 @@ export default function CodingSectionSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <i data-lucide="users" className="w-8 h-8 text-blue-400"></i>
+                <Brain className="w-8 h-8 text-blue-400" />
               </div>
               <h4 className="text-white font-medium mb-2">
                 Expert Instructors
@@ -444,10 +377,7 @@ export default function CodingSectionSection() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <i
-                  data-lucide="briefcase"
-                  className="w-8 h-8 text-green-400"
-                ></i>
+                <BriefcaseBusiness className="w-8 h-8 text-green-400" />
               </div>
               <h4 className="text-white font-medium mb-2">
                 Job Placement Support
@@ -460,7 +390,7 @@ export default function CodingSectionSection() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <i data-lucide="laptop" className="w-8 h-8 text-purple-400"></i>
+                <LaptopMinimal className="w-8 h-8 text-purple-400" />
               </div>
               <h4 className="text-white font-medium mb-2">Hands-on Projects</h4>
               <p className="text-gray-400 text-sm">
