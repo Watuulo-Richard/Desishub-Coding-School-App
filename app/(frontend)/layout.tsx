@@ -14,8 +14,8 @@ export default function FrontendLayout({
 }>) {
   return (
       <body>
-        <FloatingNavigation/>
-        {children}
+          <FloatingNavigation/>
+          {children}
       </body>
   );
 }
