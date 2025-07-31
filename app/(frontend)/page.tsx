@@ -19,29 +19,28 @@ import AboutSection from "@/components/frontend/AboutSection";
 import TeamSection from "@/components/frontend/TeamSection";
 import MultiStepForm from "@/components/frontend/Multi-step-form";
 export default function page() {
-	return (
-		<>
-			<div className="bg-dark text-white min-h-screen relative">
-				{/* <!-- 3D Background --> */}
-				<div className="bg-3d"></div>
-				<HeroSection />
-				<ServicesSection />
-				<InteractiveServices />
-				<FeaturesSection />
-				<PricingSection />
-				<WorkSection />
-				<WhyChooseUsSection />
-				<ProcessSection />
-				<FeaturedWorkSection />
-				<TechnologyStackSection />
-				<CodingSectionSection />
-				<BlogSection />
-				<FAQSection />
-				<TestimonialsSection />
-				<AboutSection />
-				<TeamSection />
-				<MultiStepForm />
-			</div>
-		</>
-	);
+
+  return (
+    <>
+      <div className="bg-dark text-white min-h-screen relative">
+        <HeroSection />
+        <ServicesSection />
+        <InteractiveServices />
+        <FeaturesSection />
+        <PricingSection />
+        <WorkSection />
+        <WhyChooseUsSection />
+        <ProcessSection />
+        <FeaturedWorkSection />
+        <TechnologyStackSection />
+        <CodingSectionSection />
+        <BlogSection />
+        <FAQSection />
+        <TestimonialsSection />
+        <AboutSection />
+        <TeamSection />
+        <MultiStepForm />
+      </div>
+    </>
+  );
 }
