@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  output: 'standalone', // Remove 'export' if you had it
+  experimental: {
+  },
 };
 
 export default nextConfig;
+

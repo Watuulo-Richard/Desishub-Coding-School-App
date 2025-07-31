@@ -16,7 +16,7 @@ export default function FloatingNavigation() {
         <div
           className="hidden md:flex items-center space-x-6 text-sm text-gray-300 ml-8"
         >
-          <Link href="#services" className="hover:text-white transition-colors"
+          <Link href="/service-page" className="hover:text-white transition-colors"
             >Services</Link>
           <Link
             href="#interactive-services"
