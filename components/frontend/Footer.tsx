@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Twitter, Linkedin, Github, Instagram } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
 	return (
@@ -10,9 +11,13 @@ export default function Footer() {
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 						<div className="md:col-span-2">
 							<div className="flex items-center mb-4">
-								<div className="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
-									<span className="text-black font-bold text-sm">D</span>
-								</div>
+								<Image
+									className="w-10 h-10"
+									src={"/desishublogo.png"}
+									alt="Logo"
+									width={200}
+									height={200}
+								/>
 								<span className="text-white font-medium text-xl">
 									DesishHub
 								</span>
