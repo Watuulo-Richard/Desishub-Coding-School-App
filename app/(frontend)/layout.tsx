@@ -2,6 +2,7 @@ import FloatingNavigation from "@/components/frontend/FloatingNavigation";
 import "./app.css";
 import type { Metadata } from "next";
 import Footer from "@/components/frontend/Footer";
+import GlassNavbar from "@/components/frontend/bottomNavigation";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -15,7 +16,12 @@ export default function FrontendLayout({
 }>) {
 	return (
 		<body>
-			<FloatingNavigation />
+			<div className="block md:hidden">
+				<GlassNavbar/>
+			</div>
+			<div className="hidden md:block">
+				<FloatingNavigation />
+			</div>
 			{children}
 			<Footer />
 		</body>
