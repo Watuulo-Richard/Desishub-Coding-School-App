@@ -129,7 +129,7 @@ export default function MultiStepForm() {
 										className={`form-step ${currentStep === 1 ? "active" : ""}`}
 										id="step-1"
 									>
-										<h3 className="text-2xl font-light mb-6 font-display">
+										<h3 className="text-2xl font-light text-white mb-6 font-display">
 											Tell us about yourself
 										</h3>
 
@@ -202,7 +202,7 @@ export default function MultiStepForm() {
 										className={`form-step ${currentStep === 2 ? "active" : ""}`}
 										id="step-2"
 									>
-										<h3 className="text-2xl font-light mb-6 font-display">
+										<h3 className="text-2xl font-light text-white mb-6 font-display">
 											What type of project do you have in mind?
 										</h3>
 

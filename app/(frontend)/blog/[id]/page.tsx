@@ -19,11 +19,11 @@ export default async function Page({
   // const {id} = await params
   return (
     <div className="min-h-screen text-white mt-32 max-w-6xl mx-auto">
-      <h1 className="text-4xl ml-52 tracking-wider">
+      <h1 className="text-2xl  md:text-4xl px-3 md:ml-52 tracking-wider">
         The Growing Threat of WhatsApp <br />
         Share Scams: A Complete Technical Breakdown{" "}
       </h1>
-      <div className="flex items-center gap-5 mt-5">
+      <div className="flex items-center gap-5 mt-5 px-3">
         <p className="text-xs">
           Updated on: <br />{" "}
           <span className="font-bold text-xs">March 7, 2002</span>
@@ -47,7 +47,7 @@ export default async function Page({
 
       <div>
         <Image
-          className="rounded-lg mt-5 h-[400px] object-cover"
+          className="rounded-lg mt-5 h-[200px] px-3 md:h-[400px] object-cover overflow-hidden"
           src={`https://images.unsplash.com/photo-1591178761188-885caa0b4fc3?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njl8fGJsb2clMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D`}
           alt="blog-image"
           width={1000}
@@ -55,7 +55,7 @@ export default async function Page({
         />
       </div>
 
-      <div className="flex items-start gap-5 mt-5">
+      <div className=" flex flex-col md:flex-row md:flex md:items-start gap-5 mt-5 px-3">
         <div className="flex items-center gap-2 flex-shrink-0">
           <Facebook size={10} />
           <Twitter size={10} />
@@ -63,7 +63,7 @@ export default async function Page({
           <div className="bg-white h-0.5 w-32 mx-2 rounded"></div>
         </div>
         <div className="flex-1">
-          <p className="text-xs max-w-lg">
+          <p className="text-xs md:max-w-lg max-w-3xl">
             Have you ever received a WhatsApp message promising quick money from
             a bank or company, only requiring you to share the link with others?
             You're not alone. Every day, thousands of people fall victim to
@@ -134,7 +134,7 @@ export default async function Page({
         </div>
       </div>
 
-    <div className="mt-10 mb-8 max-w-4xl mx-auto">
+    <div className="mt-10 mb-8 max-w-4xl mx-auto px-3">
         <h2 className="text-xl font-bold text-white mb-4">Comments</h2>
         <form className="flex flex-col gap-4 mb-6 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-6 border border-white border-opacity-20 shadow-lg">
             <textarea
@@ -194,16 +194,16 @@ export default async function Page({
         </div>
     </div>
 
-        <div className="mt-10 flex items-center justify-between">
+        <div className="mt-10 flex items-center justify-between px-3">
             <h2 className="text-2xl font-bold mb-3">Related Posts</h2>
             <Link href="/blogs" className="text-xs text-gray-400 hover:text-white">
-                <Button className="bg-white mr-20 rounded-full text-black hover:bg-gray-200">
+                <Button className="bg-white rounded-full text-black hover:bg-gray-200">
                     View All
                 </Button>
             </Link>
         </div>
-            <div className="grid grid-cols-3">
-                <div className="max-w-xs rounded-lg overflow-hidden mb-10 shadow-lg bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20">
+            <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3">
+                <div className="rounded-lg overflow-hidden mb-10 shadow-lg bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20">
                 {/* <!-- Property image placeholder (would be replaced with actual image) --> */}
                 <div className="h-48 bg-gray-300 bg-opacity-30 backdrop-blur-md">
                     <Image
@@ -232,7 +232,7 @@ export default async function Page({
                     </div>
                 </div>
                 </div>
-                <div className="max-w-xs rounded-lg overflow-hidden mb-10 shadow-lg bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20">
+                <div className="rounded-lg overflow-hidden mb-10 shadow-lg bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20">
                 {/* <!-- Property image placeholder (would be replaced with actual image) --> */}
                 <div className="h-48 bg-gray-300 bg-opacity-30 backdrop-blur-md">
                     <Image
@@ -261,7 +261,7 @@ export default async function Page({
                     </div>
                 </div>
                 </div>
-                <div className="max-w-xs rounded-lg overflow-hidden mb-10 shadow-lg bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20">
+                <div className="rounded-lg overflow-hidden mb-10 shadow-lg bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20">
                 {/* <!-- Property image placeholder (would be replaced with actual image) --> */}
                 <div className="h-48 bg-gray-300 bg-opacity-30 backdrop-blur-md">
                     <Image
