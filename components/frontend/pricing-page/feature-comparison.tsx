@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Rocket, Zap, Building, Check, Minus } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Rocket, Zap, Building, Check, X } from "lucide-react";
 import {
 	Select,
 	SelectContent,
@@ -50,7 +50,6 @@ export const basePricing: ServicePricing = {
 				{ name: "Database integration", included: false },
 				{ name: "Content Management System", included: false },
 			],
-
 			stats: [
 				{ label: "Timeline", value: "2-4 Weeks" },
 				{ label: "Pages", value: "5" },
@@ -97,7 +96,6 @@ export const basePricing: ServicePricing = {
 				{ name: "Real-time analytics", included: true },
 				{ name: "Priority support", included: true },
 			],
-
 			stats: [
 				{ label: "Timeline", value: "3-6 Months" },
 				{ label: "Scale", value: "∞" },
@@ -123,7 +121,6 @@ export const basePricing: ServicePricing = {
 				{ name: "Custom backend", included: false },
 				{ name: "Social media integration", included: false },
 			],
-
 			stats: [
 				{ label: "Timeline", value: "4-6 Weeks" },
 				{ label: "Screens", value: "5" },
@@ -148,7 +145,6 @@ export const basePricing: ServicePricing = {
 				{ name: "In-app purchases", included: true },
 				{ name: "Priority app store optimization", included: true },
 			],
-
 			stats: [
 				{ label: "Timeline", value: "8-12 Weeks" },
 				{ label: "Screens", value: "10+" },
@@ -158,7 +154,7 @@ export const basePricing: ServicePricing = {
 		},
 		{
 			name: "Pro",
-			price: 2000, // Custom pricing
+			price: 2000,
 			description: "Enterprise-grade mobile solution",
 			features: [
 				{ name: "Unlimited screens", included: true },
@@ -172,7 +168,6 @@ export const basePricing: ServicePricing = {
 				{ name: "Performance monitoring", included: true },
 				{ name: "24/7 support", included: true },
 			],
-
 			stats: [
 				{ label: "Timeline", value: "3-6 Months" },
 				{ label: "Scale", value: "∞" },
@@ -183,9 +178,9 @@ export const basePricing: ServicePricing = {
 	],
 };
 
-const UGX_TO_USD = 0.00027; // 1 UGX = 0.00027 USD (approximate)
+const UGX_TO_USD = 0.00027;
 
-export default function PricingCard() {
+export default function PricingComparison() {
 	const [selectedService, setSelectedService] = useState<"web" | "mobile">(
 		"web"
 	);
@@ -200,7 +195,6 @@ export default function PricingCard() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(
 				(position) => {
-					// Simplified check - in production use a proper geolocation service
 					const isInUganda =
 						position.coords.latitude >= -1.48 &&
 						position.coords.latitude <= 4.23 &&
@@ -208,7 +202,6 @@ export default function PricingCard() {
 						position.coords.longitude <= 35.03;
 					setIsUganda(isInUganda);
 
-					// Adjust prices if not in Uganda
 					if (!isInUganda) {
 						const adjustedPricing = JSON.parse(JSON.stringify(basePricing));
 						for (const service in adjustedPricing) {
@@ -257,97 +250,127 @@ export default function PricingCard() {
 		return selectedService === "web" ? "/project" : "/app";
 	};
 
+	// Get all unique features for comparison
+	const getAllFeatures = () => {
+		const allFeatures = new Set<string>();
+		servicePricing[selectedService].forEach((tier) => {
+			tier.features.forEach((feature) => {
+				allFeatures.add(feature.name);
+			});
+		});
+		return Array.from(allFeatures);
+	};
+
+	const getFeatureStatus = (tierName: string, featureName: string) => {
+		const tier = servicePricing[selectedService].find(
+			(t) => t.name === tierName
+		);
+		const feature = tier?.features.find((f) => f.name === featureName);
+		return feature?.included || false;
+	};
+
+	const allFeatures = getAllFeatures();
+	const tiers = servicePricing[selectedService];
+
 	return (
-		<div>
-			<section
-				id="pricing"
-				className=" max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-12"
-			>
-				<div className="max-w-7xl mx-auto">
-					{/* Service and Currency Selectors */}
-					<div className="mb-10 flex flex-col md:flex-row items-center justify-center gap-4">
-						<div className="flex items-center gap-4">
-							<Select
-								onValueChange={handleServiceChange}
-								defaultValue={selectedService}
-							>
-								<SelectTrigger className="w-[180px] bg-white/10 border-white/20 text-white hover:bg-white/20 focus:bg-white/20 focus:ring-2  transition-all duration-200 backdrop-blur-sm">
-									<SelectValue placeholder="Select a service" />
-								</SelectTrigger>
-								<SelectContent className="bg-black/80 border border-white/20 backdrop-blur-xl shadow-2xl rounded-lg z-50 min-w-[180px]">
-									<SelectItem
-										value="web"
-										className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
-									>
-										Web Development
-									</SelectItem>
-									<SelectItem
-										value="mobile"
-										className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
-									>
-										Mobile Development
-									</SelectItem>
-								</SelectContent>
-							</Select>
-
-							{/* Currency Selector */}
-							<Select
-								onValueChange={handleCurrencyChange}
-								defaultValue={selectedCurrency}
-							>
-								<SelectTrigger className="w-[120px] bg-white/10 border-white/20 text-white hover:bg-white/20 focus:bg-white/20 focus:ring-2  transition-all duration-200 backdrop-blur-sm">
-									<SelectValue placeholder="Currency" />
-								</SelectTrigger>
-								<SelectContent className="bg-black/80 border border-white/20 backdrop-blur-xl shadow-2xl rounded-lg z-50  min-w-[120px]">
-									<SelectItem
-										value="USD"
-										className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
-									>
-										USD ($)
-									</SelectItem>
-									<SelectItem
-										value="UGX"
-										className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
-									>
-										UGX (Ush)
-									</SelectItem>
-								</SelectContent>
-							</Select>
-						</div>
+		<section className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div className="max-w-7xl mx-auto">
+				{/* Header */}
+				<div className="text-center mb-16">
+					<div className="flex items-center justify-center gap-2 text-gray-400 mb-6">
+						<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+						<span className="uppercase text-xs font-medium tracking-wide">
+							Compare Plans
+						</span>
 					</div>
+					<h2 className="text-4xl font-light tracking-tight mb-6 font-display text-white">
+						Detailed Comparison
+					</h2>
+					<p className="text-base text-gray-400 max-w-2xl mx-auto">
+						Compare all features across our pricing tiers to find the perfect
+						solution for your needs.
+					</p>
+				</div>
 
-					{/* Pricing Cards Grid */}
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-						{servicePricing[selectedService].map((tier, index) => (
+				{/* Service and Currency Selectors */}
+				<div className="mb-10 flex flex-col md:flex-row items-center justify-center gap-4">
+					<div className="flex items-center gap-4">
+						<Select
+							onValueChange={handleServiceChange}
+							defaultValue={selectedService}
+						>
+							<SelectTrigger className="w-[180px] bg-white/10 border-white/20 text-white hover:bg-white/20 focus:bg-white/20 focus:ring-2 transition-all duration-200 backdrop-blur-sm">
+								<SelectValue placeholder="Select a service" />
+							</SelectTrigger>
+							<SelectContent className="bg-black/80 border border-white/20 backdrop-blur-xl shadow-2xl rounded-lg z-50 min-w-[180px]">
+								<SelectItem
+									value="web"
+									className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
+								>
+									Web Development
+								</SelectItem>
+								<SelectItem
+									value="mobile"
+									className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
+								>
+									Mobile Development
+								</SelectItem>
+							</SelectContent>
+						</Select>
+
+						<Select
+							onValueChange={handleCurrencyChange}
+							defaultValue={selectedCurrency}
+						>
+							<SelectTrigger className="w-[120px] bg-white/10 border-white/20 text-white hover:bg-white/20 focus:bg-white/20 focus:ring-2 transition-all duration-200 backdrop-blur-sm">
+								<SelectValue placeholder="Currency" />
+							</SelectTrigger>
+							<SelectContent className="bg-black/80 border border-white/20 backdrop-blur-xl shadow-2xl rounded-lg z-50 min-w-[120px]">
+								<SelectItem
+									value="USD"
+									className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
+								>
+									USD ($)
+								</SelectItem>
+								<SelectItem
+									value="UGX"
+									className="text-white/90 hover:bg-white/10 focus:bg-white/15 focus:text-white transition-all duration-150 cursor-pointer py-2 px-3 rounded-md mx-1"
+								>
+									UGX (Ush)
+								</SelectItem>
+							</SelectContent>
+						</Select>
+					</div>
+				</div>
+
+				{/* Mobile Cards View */}
+				<div className="block lg:hidden">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{tiers.map((tier, index) => (
 							<div
 								key={tier.name}
-								className={`pricing-card enhanced-glass rounded-2xl p-6 flex flex-col h-full relative ${
-									tier.isPopular ? "z-10 transform scale-105 featured" : ""
+								className={`enhanced-glass rounded-2xl p-6 relative ${
+									tier.isPopular ? "z-10 transform scale-105" : ""
 								}`}
 							>
-								{/* Popular Badge */}
 								{tier.isPopular && (
-									<div className="pricing-badge">MOST POPULAR</div>
+									<div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full transform rotate-12">
+										Popular
+									</div>
 								)}
 
-								{/* Top Badge */}
 								<div className="flex items-center mb-4">
-									<div
-										className={`icon-circle ${
-											tier.isPopular ? "bg-blue-500/20 border-blue-400/30" : ""
-										}`}
-									>
-										<tier.icon className={`${tier.iconColor} w-3 h-3`} />
+									<div className="p-2 rounded-full bg-white/10 border border-white/20">
+										<tier.icon className={`${tier.iconColor} w-4 h-4`} />
 									</div>
 									<h3 className="ml-3 text-xl text-white font-display">
 										{tier.name}
 									</h3>
 								</div>
 
-								{/* Price */}
-								<div className="mt-2 mb-6">
+								<div className="mb-6">
 									<div className="flex items-baseline">
-										<span className="text-4xl font-[200] text-white">
+										<span className="text-3xl font-[200] text-white">
 											{formatPrice(tier.price)}
 										</span>
 										{tier.price !== 0 && (
@@ -356,17 +379,11 @@ export default function PricingCard() {
 											</span>
 										)}
 									</div>
-									<p className="text-white/60 text-sm mt-1">
-										{tier.description}
-									</p>
 								</div>
 
-								<div className="card-divider w-full mb-6"></div>
-
-								{/* Features */}
-								<ul className="space-y-3 mb-8">
+								<div className="space-y-3">
 									{tier.features.map((feature, i) => (
-										<li
+										<div
 											key={i}
 											className={`flex items-center text-sm ${
 												feature.included ? "text-white/80" : "text-white/50"
@@ -375,34 +392,14 @@ export default function PricingCard() {
 											{feature.included ? (
 												<Check className="text-blue-400 mr-3 w-4 h-4" />
 											) : (
-												<Minus className="text-white/30 mr-3 w-4 h-4" />
+												<X className="text-white/30 mr-3 w-4 h-4" />
 											)}
 											<span>{feature.name}</span>
-										</li>
-									))}
-								</ul>
-
-								{/* Stats */}
-								<div className="grid grid-cols-2 gap-4 my-6">
-									{tier.stats.map((stat, i) => (
-										<div
-											key={i}
-											className={`rounded-lg p-3 text-center ${
-												tier.isPopular ? "bg-blue-500/10" : "bg-white/5"
-											}`}
-										>
-											<div className="text-2xl font-[300] text-white">
-												{stat.value}
-											</div>
-											<div className="text-xs text-white/60 mt-1">
-												{stat.label}
-											</div>
 										</div>
 									))}
 								</div>
 
-								{/* CTA */}
-								<div className="mt-auto pt-4">
+								<div className="mt-6">
 									<button
 										className={`w-full py-3 rounded-xl text-white text-sm font-medium transition-all duration-200 ${
 											tier.isPopular
@@ -412,19 +409,104 @@ export default function PricingCard() {
 									>
 										{tier.price === 0 ? "Contact Sales" : "Get Started"}
 									</button>
-									<p className="text-white/50 text-xs text-center mt-3">
-										{tier.price === 0
-											? "Custom proposal included"
-											: tier.isPopular
-											? "Free strategy session included"
-											: "Free consultation included"}
-									</p>
 								</div>
 							</div>
 						))}
 					</div>
 				</div>
-			</section>
-		</div>
+
+				{/* Desktop Table View */}
+				<div className="hidden lg:block">
+					<div className="enhanced-glass rounded-3xl overflow-hidden">
+						{/* Table Header */}
+						<div className="grid grid-cols-4 gap-4 p-6 border-b border-white/10">
+							<div className="text-white/60 text-sm font-medium">Features</div>
+							{tiers.map((tier) => (
+								<div key={tier.name} className="text-center">
+									<div
+										className={`relative ${
+											tier.isPopular ? "transform scale-105" : ""
+										}`}
+									>
+										{tier.isPopular && (
+											<div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full transform rotate-12 z-10">
+												Popular
+											</div>
+										)}
+										<div className="flex items-center justify-center mb-2">
+											<tier.icon className={`${tier.iconColor} w-5 h-5 mr-2`} />
+											<span className="text-white font-display text-lg">
+												{tier.name}
+											</span>
+										</div>
+										<div className="text-white text-2xl font-[200] mb-1">
+											{formatPrice(tier.price)}
+											{tier.price !== 0 && (
+												<span className="text-sm text-white/60 ml-1">
+													{getPriceSuffix()}
+												</span>
+											)}
+										</div>
+										<button
+											className={`w-full py-2 px-4 rounded-lg text-white text-sm font-medium transition-all duration-200 ${
+												tier.isPopular
+													? "bg-blue-600 hover:bg-blue-500"
+													: "bg-white/10 hover:bg-white/15 border border-white/10"
+											}`}
+										>
+											{tier.price === 0 ? "Contact Sales" : "Get Started"}
+										</button>
+									</div>
+								</div>
+							))}
+						</div>
+
+						{/* Features Comparison */}
+						<div className="divide-y divide-white/5">
+							{allFeatures.map((featureName, index) => (
+								<div
+									key={featureName}
+									className="grid grid-cols-4 gap-4 p-4 hover:bg-white/5 transition-colors"
+								>
+									<div className="text-white/80 text-sm font-medium flex items-center">
+										{featureName}
+									</div>
+									{tiers.map((tier) => (
+										<div key={tier.name} className="flex justify-center">
+											{getFeatureStatus(tier.name, featureName) ? (
+												<Check className="text-blue-400 w-5 h-5" />
+											) : (
+												<X className="text-white/30 w-5 h-5" />
+											)}
+										</div>
+									))}
+								</div>
+							))}
+						</div>
+
+						{/* Stats Comparison */}
+						<div className="p-6 bg-white/5">
+							<h4 className="text-white font-medium mb-4">Project Details</h4>
+							<div className="space-y-3">
+								{tiers[0].stats.map((_, statIndex) => (
+									<div key={statIndex} className="grid grid-cols-4 gap-4">
+										<div className="text-white/60 text-sm">
+											{tiers[0].stats[statIndex].label}
+										</div>
+										{tiers.map((tier) => (
+											<div key={tier.name} className="text-center">
+												<span className="text-white font-medium">
+													{tier.stats[statIndex]?.value || "N/A"}
+												</span>
+											</div>
+										))}
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	);
 }
