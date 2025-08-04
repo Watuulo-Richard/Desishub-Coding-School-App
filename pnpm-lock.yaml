@@ -4263,6 +4263,7 @@ snapshots:
 
   motion-utils@12.23.6: {}
 
+
   motion@12.23.12(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       framer-motion: 12.23.12(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
